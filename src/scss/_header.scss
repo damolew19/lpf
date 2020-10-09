@@ -1,0 +1,59 @@
+
+.header {
+	box-shadow: 0px 4px 4px #00000025;
+	z-index: 4;
+	position: relative;
+	overflow: hidden;
+	max-height: 4rem;
+	padding: 1.4rem;
+	transition: max-height 0.5s ease-in-out;
+	position: fixed;
+	width: 100%;
+	background: $bg-color;
+	font-size: 1em;
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		
+	}
+
+
+	&__title {
+		font-family: $main-font;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	&__navigation {
+
+		&--mobile {
+			padding-top: 1rem;
+		}
+	}
+
+	&__list-wrapper {
+		display: none;
+		font-family: $main-font;
+		text-transform: uppercase;
+
+		&--mobile {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		padding: 0 0.5rem;
+	}
+
+	&__button {
+		border: none;
+		outline: none;
+	}
+
+	&__hamburger line{
+		stroke: $default;
+	}
+}

@@ -1,0 +1,14 @@
+.footer {
+	background: #e9ebea;
+	padding: 2rem 2rem;
+	height: 100%;
+	display: block;
+
+	&__title{
+		padding: 1rem 0;
+	}
+
+	&__contact , &__springvale, &__laverton {
+		padding: 0.5rem 0;
+	}
+}

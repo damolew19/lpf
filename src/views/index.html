@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <title>Static Website Template</title>
+    <title>Lee's Picture Framing</title>
     <module href="/components/head.html"></module>
   </head>
-
   <body>
-    <div class="center full-sized">
-      <h1>Static Website Template</h1>
-      <img src="images/logo.png" />
+    <module href='/components/header.html'></module>
+
+    <div class='lower-elements'>
+      <main>
+        <section class='home'>
+          <div class='home__content-wrapper'>
+            <h1 class='home__heading'>Frames For Life</h1>
+            <h2 class='home__secondary-heading'>Specialist in designing and manufactoring picture frames.</h2>
+            <button class='home__call-to-action'>Make an Enquiry</button>
+          </div>
+        </section>
+
+        <section class='welcome'>
+          <h2 class='welcome__title section-title'>Meet Your Framers</h2>
+          <div class='welcome__content-wrapper'>
+            <div class='welcome__underline divider'></div>
+            <div class='welcome__text text-news'>
+              <p>We are a picture framing business located in the south eastern region of Melbourne. Our goal is to help people design and build perfect picture frame from their home, business or exhibition. When you come to us, you wil speak directly to the frames, and get expert advice on the best prices and design for your work. With over  20 years of experience, there hasn’t been anything we couldn’t frame.</p>
+            </div>
+          </div>
+          <div class='welcome__image-wrapper'>
+            <img class='welcome__image' src='../images/custom.jpeg' alt='Picture Framers'/>
+          </div>
+        </section>
+
+        <section class='services'>
+            <div class='services__first-col'>
+              <div class='services__text-wrapper'>
+                <p class='services__text'>
+                  We are <span class='bold-text'>custom Framing specialist</span>. Our serivces include memorabillia framing, emboridry framing, certificates, photos, weddings, paintings, canvas’s and more.  We can almost frame anything. 
+                </p>
+              </div>
+              <div class='services__img-wrapper'>
+                <img class='services__img' src='./images/custom.jpeg' alt='framing picture' />
+              </div>
+            </div>
+            <div class='services__second-col'>
+              <div class='services__img-wrapper'>
+                <img class='services__img' src='./images/custom.jpeg' alt='framing picture' />
+              </div>
+              <div class='services__text-wrapper'>
+                <p class='services__text'>
+                  We are custom Framing specialist. Our serivces include memorabillia framing, emboridry framing, certificates, photos, weddings, paintings, canvas’s and more.  We can almost frame anything. 
+                </p>
+              </div>
+            </div>
+        </section>
+
+        <section class='featured'>
+          <div class='featured__header'>
+            <div class='featured__header-top'>
+              <module href='/svg/insta-icon.svg'></module>
+              <h2 class='featured__title section-title'>Featured Work</h2>
+            </div>
+            <div class='featured__header-bottom'>
+              <div class='featured__text'>
+                <p>Follow Along For Inspiration.</p>
+              </div>
+              <div class='featured__underline divider'></div>
+            </div>
+          </div>
+            <div class='featured__grid'>
+              <a href='https://www.instagram.com/p/B3V-5fkpiJ8/?hl=en' target="_blank"><img class='featured__image'  src='../images/feature-one.jpg' /></a>
+              <a href='https://www.instagram.com/p/B221vetJJDU/?hl=en' target="_blank"><img class='featured__image' src='../images/feature-two.jpeg' /></a>
+              <a href='https://www.instagram.com/p/B3q_FqaJcNh/?hl=en' target="_blank"><img class='featured__image' src='../images/feature-three.jpeg' /></a>
+              <a href='https://www.instagram.com/p/B4wh92lJieU/?hl=en' target="_blank"><img class='featured__image' src='../images/feature-four.jpeg' /></a>
+              <a href='https://www.instagram.com/p/B3V-5fkpiJ8/?hl=en' target="_blank"><img class='featured__image' src='../images/feature-one.jpg' /></a>
+            </div>
+        </section>
+
+
+
+        <section class='stores'>
+          <div class='stores__header'>
+            <h2 class='stores__title section-title'>Our Two Stores</h2>
+            <div class='stores__underline divider'></div>
+          </div>
+          <div class='stores__card-wrapper'>
+            <div class='stores__card'>
+              <h3 class='stores__sub-heading'>Springvale</h3>
+              <div class='stores__map'>
+                <a href="http://maps.google.com/?q=Unit 20/134-142 Springvale Rd, Springvale VIC 3171" target='_blank'>
+                  <img src='../images/map-springvale.png' alt='google maps laverton' />
+                </a>      
+              </div>
+              <p class='stores__address'>Address: 20/134 Springvale Rd, Springvale 3171</p>
+              <p class='stores__times'>
+                Opening Times:<br />
+                Mon-Friday: 9am - 3pm<br />
+                Sat-Sun: Closed<br />
+              </p>
+            </div>
+            <div class='stores__spacer'></div>
+            <div class='stores__card'>
+               <h3 class='stores__sub-heading'>Laverton</h3>
+                <div class='stores__map'>
+                  <a href="http://maps.google.com/?q=8-18 Leakes Rd, Laverton North VIC 3026" target='_blank'>
+                    <img src='../images/map-laverton.png' alt='google maps laverton' />
+                  </a>
+                </div>
+              <p class='stores__address'>8/18 Leakes Rd, Laverton North VIC 3026</p>
+              <p class='stores__times'>
+                Opening Times:<br />
+                Mon-Friday: closed<br />
+                Sat-Sun: 9am - 3pm<br />
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <module href='/components/footer.html'></module>
     </div>
 
+  <!--   <script defer 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJTuaU1Y07tVCHG6qnVRqcGSX5y5JpYTc">
+    </script> -->
     <script src="bundle.js" defer async></script>
+      
   </body>
 </html>

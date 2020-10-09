@@ -1,0 +1,33 @@
+import React from "react";
+
+
+const ServicesSection = () => {
+
+  return(
+    <div class='services-page__content-wrapper'>
+      <div class='services-page__hero-section'>
+        <div class='services-page__hero-heading-wrapper'>
+          <h2 class='services-page__hero-heading'>Photos</h2>
+        </div>
+        <div class='services-page__hero-text-wrapper'>
+          <p class='services-page__hero-text'>
+            Have your photo's perfectly placed within the frame. No bubbles, no dust, no creases.
+          </p>
+        </div>
+      </div>
+      <div class='services-page__img-wrapper'>
+          <div class='services-page__item'>
+            <img class='services-page__item-image' src='../images/feature-one.jpg' />
+          </div>
+          <div class='services-page__item'>
+            <img class='services-page__item-image' src='../images/feature-one.jpg' />
+          </div>
+          <div class='services-page__item'>
+            <img class='services-page__item-image' src='../images/feature-one.jpg' />
+          </div>
+        </div>
+    </div>
+    )
+}
+
+

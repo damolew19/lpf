@@ -1,0 +1,64 @@
+.gallery-page {
+	padding: 6rem 0rem;
+	text-align: center;
+
+	&__header {
+		margin-bottom: 2rem;
+	}
+
+	&__underline {
+		margin: auto;
+	}
+
+	&__title {
+		font-weight: normal;
+	}
+
+	&__months-wrapper {
+		padding: 2rem 1rem;
+	}
+
+	&__month-header {
+		position: relative;
+		height: 150px;
+		width: 100%;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			background: url('../images/gallery-cover.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			opacity: 0.3;
+		
+		}
+	}
+
+	&__month-heading {
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height: 100%;
+		font-size: 2em;
+	}
+
+	&__item {
+		height: 450px;
+	}
+
+	&__item-image {
+		height: 100%;
+	}
+
+	&__item-text {
+		padding: 0.5rem;
+		font-size: 1.5em;
+	}
+
+}

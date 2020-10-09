@@ -1,0 +1,445 @@
+
+
+@media only screen and (min-width: 800px){
+
+	.section-title {
+	    font-size: 60px;
+	    text-align: left;
+	    padding-bottom: 0.5rem;
+	}
+
+	.divider {
+	    border: 1px solid #49494b;
+	    background: $default;
+	}
+
+	.header {
+		padding: 1rem 4rem;
+		max-height: none;
+
+		&__navigation {
+			display: block;
+
+		}
+
+		&__mobile {
+			display: none;
+		}
+
+		&__list-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		&__item {
+			padding: 0 1rem;
+		}
+	
+		&__button{
+			display: none;
+
+		}
+	}
+
+	.footer {
+		padding: 2rem 6rem;
+
+		&__contact h3, &__contact p, &__location h3, &__location p {
+			margin-bottom: 0.5rem
+		}
+
+		&__large-screen-divider {
+			border: solid 1px $default;
+			background: $default;
+		}
+
+		&__body {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+
+	.services-page {
+   		padding: 2rem 8rem;
+
+   		&__heading {
+			font-family: $main-font;
+			font-size: 60px;
+			font-weight: normal;
+		}
+
+		&__img-wrapper {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			padding: 2rem 0;
+		}
+
+		&__underline {
+			margin: 0.4rem 1rem 0 0 ;
+			width: 660px;
+		}
+
+		&__hero-section {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		&__hero-text-wrapper {
+			margin: 0;
+		}
+
+		&__item-image {
+			width: 200px;
+			height: auto;
+		}
+
+		&__item-text {
+			font-size: 1em;
+		}
+	}
+
+	.gallery-page {
+		padding: 2rem 8rem;
+
+   		&__title {
+			font-family: $main-font;
+			font-size: 60px;
+			font-weight: normal;
+		}
+
+		&__month-header {
+			padding: 0;
+		}
+
+		&__images-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__underline {
+			margin: 0.4rem 1rem 0 0 ;
+			width: 660px;
+		}
+
+		&__item {
+			padding: 0;
+			width: 25%;
+			height: 250px;
+		}
+
+		&__item-image {
+			height: 100%;
+		}
+	}
+
+	.contact-page {
+
+		padding: 2rem 4rem;
+
+   		&__title {
+			font-family: $main-font;
+			font-size: 60px;
+			font-weight: normal;
+		}
+
+		&__underline {
+			margin: 0.4rem 1rem 0 0 ;
+			width: 660px;
+		}
+
+		&__content-wrapper {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		&__form {
+			margin: 0;
+		}
+
+		&__information {
+			text-align: left;
+			padding: 0 2rem;
+			font-size: 12px;
+
+			&-block {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				padding: 1rem 0;
+				border-bottom: solid 1px $default;
+			}
+
+			&-mobile-wrapper, &-email-wrapper, &-location {
+				display: flex;
+				align-items: center;
+			}
+
+			// &-mobile-wrapper, &-email-wrapper, &-location, &-times {
+			// 	width: 50%;
+			// }
+
+			&-divider {
+				height: 100%;
+				border: solid 1px $default;
+				background: $default;
+			}
+
+		}
+		&__icon {
+				min-width: 36px;
+				margin-right: 0.5rem;
+
+				&--smaller {
+					width: 28px;
+				}
+
+			}
+
+	}
+
+	.about-page {
+		padding: 2rem 8rem;
+
+		&__title {
+			font-family: $main-font;
+			font-size: 60px;
+			font-weight: normal;
+		}
+
+		&__content-wrapper {
+			display: flex;
+			align-items: flex-start;
+			padding: 2rem 0;
+		}
+
+		&__underline {
+			margin: 0.4rem 1rem 0 0 ;
+			width: 660px;
+		}
+
+		&__text {
+			padding: 0rem;
+		}
+	}
+
+	//homePage Section Starts
+
+	.home {
+		background: linear-gradient(90.42deg, rgba(255, 255, 255, 0.75) 21.69%, rgba(196, 196, 196, 0) 99.33%);
+		text-align: left;
+		&:after {
+			content: '';
+			background: url('../images/hero.jpeg');
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			min-height: 100%;
+			background-size: cover;
+			background-position: 0% 0%;
+			z-index: -1;
+		}
+
+		&__content-wrapper {
+			max-width: 450px;
+			margin-left: 5%;
+			margin-top: 5%;
+		}
+
+		&__secondary-heading {
+			font-size: 1em;
+			padding: 0;
+		}
+
+		&__call-to-action {
+			font-size: 1em;
+			padding: 0.5em;
+		}
+
+
+	}
+
+	.welcome, .services, .featured, .stores {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		max-width: 1800px;
+		margin: auto;
+	}
+
+
+	.welcome {
+		padding: 4rem 8rem;
+
+		&__title {
+			padding-bottom: 2rem;
+		}
+
+		&__content-wrapper {
+			display: flex;
+			align-items: flex-start;
+			padding-bottom: 2rem;
+		}
+
+		&__underline {
+			margin: 0.4rem 1rem 0 0 ;
+			width: 300px;
+		}
+
+		&__text {
+			padding: 0;
+			max-width: 700px;
+		}
+
+		&__image-wrapper {
+			width: 100%;
+			height: 50vh;
+			min-height: 400px;
+			padding: 2rem 0;
+		}
+	}
+
+	.services {
+		text-align: left;
+		display: flex;
+		padding: 4rem 8rem;
+
+		&__text-wrapper {
+			border: solid $default 2px;
+			padding: 3rem;
+		}
+
+		&__first-col &__img-wrapper {
+			padding-right: 1rem;
+		}
+
+		&__second-col &__img-wrapper {
+			padding-left: 1rem;
+		}
+
+		&__img-wrapper {
+			min-height: 500px;
+			height: 60vh;
+		}
+
+		&__img {
+			height: 100%;
+		}
+
+		&__second-col {
+			transform: translateY(-50px);
+		}
+	}
+
+	.featured {
+		text-align: left;
+		padding: 4rem 8rem;
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2rem;
+
+			&-top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			&-bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+		&__title {
+			padding: 0;
+		}
+
+		&__icon { 
+			width: 25px;
+			order: 1;
+		}
+
+		&__text {
+			padding: 0;
+			order: 1;
+		}
+
+		&__underline {
+			margin: 0;
+			width: 200px;
+		}
+
+		&__grid {
+			grid-template-columns: 1.4fr 1fr 1fr;
+			grid-template-rows: minmax(200px, 40vh) minmax(200px, 40vh);
+			padding: 0;
+
+			& a {
+				transition: transform 0.2s ease-in-out;
+			}
+	
+			& a:first-child {
+	  			grid-column: 1 / 2;
+	  			grid-row: 1 / 3;
+	  			min-height: 100%;
+	  		}
+		}
+	}
+
+	.stores {
+		padding: 4rem 8rem;
+
+
+		&__header {
+			margin-bottom: 2rem;
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__card-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__spacer {
+			width: 5%;
+		}
+
+		&__card {
+			flex: 1;
+		}
+	}
+
+	//homePage Section Ends
+}
+
+@media only screen and (min-width: 1500px) {
+	html {
+		font-size: 24px;
+	}
+
+	.section-title {
+	    font-size: 5em;
+	    padding-bottom: 1rem;
+	}
+
+	.home {
+		font-size: 36px;
+
+		&__content-wrapper {
+			max-width: 1000px;
+		}
+
+		&__secondary-heading {
+			padding: 1rem 0;
+		}
+	}
+
+
+}
+
