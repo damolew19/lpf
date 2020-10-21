@@ -16,6 +16,7 @@
 	.header {
 		padding: 1rem 4rem;
 		max-height: none;
+		font-size: 1.2em;
 
 		&__navigation {
 			display: block;
@@ -68,13 +69,6 @@
 			font-weight: normal;
 		}
 
-		&__img-wrapper {
-			display: flex;
-			align-items: flex-start;
-			flex-wrap: wrap;
-			padding: 2rem 0;
-		}
-
 		&__underline {
 			margin: 0.4rem 1rem 0 0 ;
 			width: 660px;
@@ -90,10 +84,11 @@
 			margin: 0;
 		}
 
-		&__item-image {
-			width: 200px;
-			height: auto;
+		&__item {
+			width: 33.3%;
+  			padding: 0.2rem;
 		}
+
 
 		&__item-text {
 			font-size: 1em;
@@ -243,30 +238,34 @@
 		}
 
 		&__content-wrapper {
-			max-width: 450px;
 			margin-left: 5%;
 			margin-top: 5%;
+			max-width: 650px;
+		}
+
+		&__heading {
+			font-size: 5em;
 		}
 
 		&__secondary-heading {
-			font-size: 1em;
-			padding: 0;
+			font-size: 2em;
+			padding: 0.5em 0;
 		}
 
 		&__call-to-action {
-			font-size: 1em;
+			font-size: 2em;
 			padding: 0.5em;
 		}
 
 
 	}
 
-	.welcome, .services, .featured, .stores {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-		max-width: 1800px;
-		margin: auto;
-	}
+	// .welcome, .services, .featured, .stores {
+	// 	padding-top: 4rem;
+	// 	padding-bottom: 4rem;
+	
+	// 	margin: auto;
+	// }
 
 
 	.welcome {
@@ -304,10 +303,19 @@
 		text-align: left;
 		display: flex;
 		padding: 4rem 8rem;
+		margin-top: 4rem;
 
 		&__text-wrapper {
 			border: solid $default 2px;
-			padding: 3rem;
+			padding: 5rem;
+		}
+
+		&__first-col {
+			flex: 2;
+		}
+
+		&__second-col {
+			flex: 1.5;
 		}
 
 		&__first-col &__img-wrapper {
@@ -320,16 +328,29 @@
 
 		&__img-wrapper {
 			min-height: 500px;
-			height: 60vh;
+			height: 80vh;
 		}
 
 		&__img {
 			height: 100%;
 		}
 
-		&__second-col {
-			transform: translateY(-50px);
+		&__first-col &__img {
+			margin-top: 2rem;
 		}
+
+
+		&__first-col &__text-wrapper {
+		margin-bottom: 10rem;
+		}
+
+		&__second-col &__text-wrapper {
+			margin-top: 2rem;
+		}
+
+		// &__second-col {
+		// 	transform: translateY(-50px);
+		// }
 	}
 
 	.featured {
@@ -418,7 +439,7 @@
 	//homePage Section Ends
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1700px) {
 	html {
 		font-size: 24px;
 	}
@@ -429,7 +450,6 @@
 	}
 
 	.home {
-		font-size: 36px;
 
 		&__content-wrapper {
 			max-width: 1000px;

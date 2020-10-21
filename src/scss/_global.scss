@@ -73,3 +73,22 @@ a {
 .bold-text{
     font-weight: bold;
 }
+
+.link {
+    position: relative;
+    transition: clip-path 275ms ease;
+
+    &:hover:before, &:focus:before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &:before {
+        position: absolute;
+        content: attr(data-content);
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: inherit;
+        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+        transition: clip-path 275ms ease;
+    }
+}

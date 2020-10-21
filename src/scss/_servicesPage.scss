@@ -21,7 +21,12 @@
 	&__nav-item {
 		padding-right: 0.5rem;
 		padding-bottom: 0.5rem;
+		cursor: pointer;
 	}
+
+	// &__content-wrapper {
+	// 	display: none;
+	// }
 
 	&__hero-section {
 		position: relative;
@@ -55,12 +60,22 @@
 		margin: auto;
 	}
 
+	&__img-wrapper {
+		display: grid;
+	}
+
 	&__item {
-		padding: 1rem;
+		display: block;
+		width: 50%;	
+		height: auto;
+		padding: 0.1rem;
 	}
 
 	&__item-image {
-		height: 450px;
+		 max-height: 100%;
+		  min-width: 100%;
+		  object-fit: cover;
+		  vertical-align: bottom;
 	}
 
 	&__item-text {
@@ -68,4 +83,8 @@
 		font-size: 1.5em;
 	}
 
+}
+
+.show-service {
+    display: block;
 }
