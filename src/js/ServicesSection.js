@@ -1,20 +1,25 @@
-import React, {useState, useEffect} from "react";
-
-import Masonry from 'masonry-layout';
-import imagesLoaded from 'imagesloaded';
-
+import React, {useEffect} from "react";
 
 
 
 
 const Images = ({images}) => {
 
-
   return(
       images.map((img, index) => {
         return (
           <div className='services-page__item' key={index}>
-            <img className='services-page__item-image' src={`../images/${img.substring(2)}`} alt='pictureframing'/>
+            <img 
+              className='services-page__item-image lazy' 
+              src={`https://ik.imagekit.io/damolew19/images/${img.substring(2)}?tr=bl-30,q-50`} 
+              data-srcset={`https://ik.imagekit.io/damolew19/images/${img.substring(2)}?tr=w-320 320w,
+                       https://ik.imagekit.io/damolew19/images/${img.substring(2)}?tr=w-480 480w,
+                       https://ik.imagekit.io/damolew19/images/${img.substring(2)}?tr=w-720 720w`}
+              data-sizes="(max-width: 480px) 100vw,
+                     (max-width: 720px) 50vw, 
+                      33vw"
+              alt='pictureframing'  
+            />
           </div>
         );
       })
@@ -25,56 +30,38 @@ const Images = ({images}) => {
   
 
 
-const ServicesSection = ({title}) => {
+const ServicesSection = ({title, images, text}) => {
 
-  const [images, setImages] = useState([]);
-  const [masonry, setMasonry] = useState('');
+  function lazy() {
+  var lazyloadImages;    
+  lazyloadImages = document.querySelectorAll(".lazy");
 
-  
-  const cache = {};
 
-  function importAll (r) {
-    r.keys().forEach(key => cache[key] = r(key));
-    return cache;
+  function callback(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.intersectionRatio > 0) {
+          var image = entry.target;
+          image.src = image.dataset.srcset;
+        }
+      });
   }
 
-  useEffect(() => { 
-
-    let imgObj;
-
-    //import the correct photos on user interaction
-    if (title === 'Photos') {
-      imgObj = importAll(require.context(`../images/photos`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    } else if (title === 'Prints') {
-      imgObj = importAll(require.context(`../images/prints`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    } else if (title === 'Canvas') {
-      imgObj = importAll(require.context(`../images/canvas`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    } else if (title === 'Certificates') {
-      imgObj = importAll(require.context(`../images/certificates`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    } else if (title === 'Memorabilia') {
-      imgObj = importAll(require.context(`../images/memorabilia`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    } else if (title === 'Shadow Frame') {
-      imgObj = importAll(require.context(`../images/shadow-frame`, false, /\.(png|jpe?g|JPG|JPEG|svg)$/));
-    }
+  const options = {
+    threshold: [1.0],
+    rootMargin: '0px 0px 500px 0px',  
+  };
 
     
-    const imgArr = Object.keys(imgObj);
-    setImages(imgArr);
+    var imageObserver = new IntersectionObserver(callback, options);
 
-    const grid = document.querySelector('.services-page__img-wrapper');
-    imagesLoaded( grid, function() {
-
-      //changing state will initialize the grid after first render
-      setMasonry('worked');
-      new Masonry( grid, {
-        itemSelector: '.services-page__item',
-        columnWidth: '.services-page__item',
-        percentPosition: true
-      });
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
     });
-    
+}
 
-  }, [title, masonry]) ;
+useEffect(() => {
+  lazy();
+});
 
   return(
     <div id={`services${title}`} className='services-page__content-wrapper'>
@@ -84,13 +71,13 @@ const ServicesSection = ({title}) => {
         </div>
         <div className='services-page__hero-text-wrapper'>
           <p className='services-page__hero-text'>
-            Have your photos perfectly placed within the frame. No bubbles, no dust, no creases.
+            {text}
           </p>
         </div>
       </div>
 
       <div className='services-page__img-wrapper'>
-        <Images images={images}/>
+        <Images images={images} />
       </div>
 
      

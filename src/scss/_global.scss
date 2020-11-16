@@ -31,13 +31,19 @@ button {
     color: $default;
     border-color: $default;
     font-family: inherit;
+    outline: none;
 }
 
 .section-title {
-    font-size: 2.25em;
+    font-size: 2em;
     font-family: $title-font;
     font-weight: normal;
+    padding-bottom: 0.5rem;
 
+}
+
+.section-title-wrapper {
+    margin-bottom: 2rem;
 }
 
 .divider {
@@ -47,7 +53,7 @@ button {
 }
 
 .text-news {
-    text-align: justify;
+  text-align: justify;
   text-justify: inter-word;
 }
 
@@ -60,10 +66,10 @@ a {
     text-decoration: none;
 }
 
-.lower-elements {
-    position: relative;
-    top: 3rem;
-}
+// .lower-elements {
+//     position: relative;
+//     top: 8rem;
+// }
 
 .horizontal-margins {
     padding-left: 8rem;
@@ -91,4 +97,44 @@ a {
         clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
         transition: clip-path 275ms ease;
     }
+}
+
+.margin-center {
+  margin: auto;
+}
+
+.icon {
+    width: 36px;
+}
+
+.btn-16 {
+  border: none;
+  color: $default;
+  position: relative;
+  background: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  border-radius: 5px;
+}
+.btn-16::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  direction: rtl;
+  z-index: 1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.btn-16:hover {
+  color: $default;
+}
+.btn-16:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
 }

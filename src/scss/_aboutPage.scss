@@ -1,5 +1,5 @@
 .about-page {
-	padding: 6rem 0rem;
+	padding: 2rem 0rem;
 	text-align: center;
 
 	&__underline {
@@ -11,7 +11,11 @@
 	}
 
 	&__text {
-		padding: 2rem;
+		margin: 2rem;
+	}
+
+	&__image {
+		height: 100%;
 	}
 
 }

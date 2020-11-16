@@ -1,14 +1,41 @@
 .footer {
 	background: #e9ebea;
 	padding: 2rem 2rem;
-	height: 100%;
 	display: block;
 
-	&__title{
-		padding: 1rem 0;
+	&__useful-links, &__connect  {
+		display: flex;
+		flex-direction: column;
 	}
 
-	&__contact , &__springvale, &__laverton {
-		padding: 0.5rem 0;
+	&__link, &__sub-heading, &__connect-link {
+		margin-bottom: 0.5rem;
+	}
+
+	&__useful-links, &__connect, &__springvale, &__laverton {
+		margin: 0.5rem;
+	}
+
+	&__bottom {
+		display: flex;
+		padding-top: 2rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	& .lpf-logo {
+		margin-bottom: 1rem;
+	}
+
+	& .featured__icon {
+		width: 36px;
+		margin-right: 0.5rem;
 	}
 }
