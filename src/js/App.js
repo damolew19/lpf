@@ -18,11 +18,14 @@ const App = () => {
 	const [service, setService] = useState("Photos");
 	const [images, setImages] = useState(["./IMG_8030.JPEG", "./IMG_8061.JPEG", "./IMG_9934.JPEG", "./lee_pi_076.JPG", "./lee_pi_078.JPG", "./lee_pi_313.JPG"]);
   const [text, setText] = useState("Frame the most important moments of your life.");
+  const [altText, setAlt] = useState("Photo Framing");
 
 	function handleServiceSelection(e) {
 		if (e.target.id.length !== 0) {
 			setService(e.target.id);
       setText(serviceText[e.target.id]);
+      //this is to set the alt attrbite for the image tag
+      setAlt(`${e.target.id} Framing`);
 		}
 	}	
 
@@ -54,7 +57,7 @@ const App = () => {
     setImages(imgArr);
 
     const grid = document.querySelector('.services-page__img-wrapper');
-    imagesLoaded( grid, function() {;
+    imagesLoaded( grid, function() {
       new Masonry( grid, {
         itemSelector: '.services-page__item',
         columnWidth: '.services-page__item',
@@ -68,7 +71,7 @@ const App = () => {
 	<React.Fragment>
 		<ServicesNavigation handleServiceSelection={handleServiceSelection}/>
 		<div>
-			<ServicesSection title={service} images={images} text={text}/>
+			<ServicesSection title={service} images={images} text={text} alt={altText}/>
 		</div>
 	</React.Fragment>
 	);

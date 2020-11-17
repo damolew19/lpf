@@ -3,12 +3,13 @@ import React, {useEffect} from "react";
 
 
 
-const Images = ({images}) => {
+const Images = ({images, altText}) => {
+
 
   return(
       images.map((img, index) => {
         return (
-          <div className='services-page__item' key={index}>
+          <figure className='services-page__item' key={index}>
             <img 
               className='services-page__item-image lazy' 
               src={`https://ik.imagekit.io/damolew19/images/${img.substring(2)}?tr=bl-30,q-50`} 
@@ -18,9 +19,9 @@ const Images = ({images}) => {
               data-sizes="(max-width: 480px) 100vw,
                      (max-width: 720px) 50vw, 
                       33vw"
-              alt='pictureframing'  
+              alt={altText}  
             />
-          </div>
+          </figure>
         );
       })
       );
@@ -30,14 +31,14 @@ const Images = ({images}) => {
   
 
 
-const ServicesSection = ({title, images, text}) => {
+const ServicesSection = ({title, images, text, alt}) => {
 
   function lazy() {
   var lazyloadImages;    
   lazyloadImages = document.querySelectorAll(".lazy");
 
 
-  function callback(entries, observer) {
+  function callback(entries) {
       entries.forEach(function(entry) {
         if (entry.intersectionRatio > 0) {
           var image = entry.target;
@@ -77,7 +78,7 @@ useEffect(() => {
       </div>
 
       <div className='services-page__img-wrapper'>
-        <Images images={images} />
+        <Images images={images} altText={alt} />
       </div>
 
      
