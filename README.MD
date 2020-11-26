@@ -1,1 +1,1 @@
-Statis website for local business Lee's Picture Framing
+Statis website for local business Lee's Picture Framing 

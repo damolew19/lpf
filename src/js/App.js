@@ -8,10 +8,10 @@ import imagesLoaded from 'imagesloaded';
 const App = () => {
 
   const serviceText = {
-    Photos: "Frame the most important moments of your life.",
-    Prints: "No matter how big or small, your prints will lay perflectly flat inside our frames.",
-    Canvas: "From strecthed, mounted, frameless, or framed, we can frame canvas's anyway you like it",
-    Memorabilia: "Jerseys, vinyls, jumpers, shoes and more!",
+    Photos: "Frame the most critical moments of your life.",
+    Prints: "No matter how big or small, your prints will lay perfectly flat inside our frames.",
+    Canvas: "From stretched, mounted, frameless, or framed, we can frame canvas any way you like it.",
+    Memorabilia: "Jerseys, vinyl, jumpers, shoes, and more!",
     'Shadow Frame': "We create box frames for any 3d object."
   };
 
