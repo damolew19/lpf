@@ -1,57 +1,24 @@
 {
-  "name": "static-website-template",
-  "version": "1.0.1",
-  "description": "template for static website",
-  "author": "Vincent Will <vincent.will@vaitrade.de>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Vincenius/static-website-template"
-  },
+  "name": "lpf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "lpf",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "clean": "rimraf dist/*",
-    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "css:scss": "node-sass --output-style compressed -o dist src/scss",
-    "css:lint": "stylelint src/scss/*.scss --syntax scss",
-    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
-    "build:js": "webpack --mode=production",
-    "build:html": "posthtml -c posthtml.json",
-    "build": "run-s build:*",
-    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
-    "watch:css": "onchange \"src/scss\" -- npm run build:css",
-    "watch:html": "onchange \"src/views\" -- npm run build:html",
-    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
-    "watch": "run-p serve watch:*"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.12",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^3.0.4",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.3",
-    "file-loader": "^6.1.1",
-    "htmlnano": "^0.2.6",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^6.1.1",
-    "postcss-cli": "^7.1.2",
-    "posthtml": "^0.12.3",
-    "posthtml-cli": "^0.5.4",
-    "posthtml-modules": "^0.4.3",
-    "stylelint": "^13.7.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "imagesloaded": "^4.1.4",
-    "masonry-layout": "^4.2.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "regenerator-runtime": "^0.13.7"
+    "gatsby": "^4.13.0",
+    "gatsby-plugin-react-helmet": "^5.13.0",
+    "gatsby-plugin-sitemap": "^5.13.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   }
 }
